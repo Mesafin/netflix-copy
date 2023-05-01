@@ -7,8 +7,8 @@ import movieTrailer from "movie-trailer";
 
 function Banner() {
     const [ movie, setMovie ] = useState([]); 
-    const [trailerUrl, setTrailerUrl] = useState("");
-	const [status, setStatus] = useState("play")
+    const [ trailerUrl, setTrailerUrl ] = useState("");
+	const [ status, setStatus ] = useState("play");
 
 
     useEffect(() => {
@@ -47,7 +47,15 @@ function Banner() {
 			.catch((error) => console.log(error));
 		}
 	  };
-	  console.log(trailerUrl)
+	//   console.log(trailerUrl)
+
+
+	const scrollDown = () => {
+    window.scrollTo({
+    top: 2400,
+    behavior: 'smooth',
+  });
+};
   return (
     <header className="banner"
 			style={{
@@ -62,19 +70,19 @@ function Banner() {
 					{movie?.title || movie?.name || movie.original_name}
 				</h1>
 				<div className="banner__buttons">
-						
 					<button className="banner__button" onClick={() => handleClick(movie)} >{status}</button>
-					<button className="banner__button">My List</button>
+					<button className="banner__button" onClick={() => scrollDown()} >My List</button>
 				</div>
+				
 				<h1 className="banner__description">
 					{truncate(movie?.overview, 150)}
 				</h1>
 			</div>
-			<div className="row__youtube">
+			<div className="row__banner__youtube">
 				{trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
 			</div>
 			</div>
-			<div className="banner__fadeBottom" />
+			<div className="banner--fadeBottom" ></div>
 			
 		</header>
   )

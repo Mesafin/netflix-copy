@@ -67,7 +67,7 @@ function Footer() {
 				</ul>
 			</div>
 			<h1>
-				Built By: <a href=" ">Mesafint</a>
+			 <a href="/">Mesafint M.</a>
 			</h1>
 		</div>
 	);

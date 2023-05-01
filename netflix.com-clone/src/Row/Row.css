@@ -4,11 +4,12 @@
 }
 
 .row__poster {
-	width: 100%;
+	width: 80%;
 	object-fit:contain;
 	max-height: 100px;
 	transition: transform 450ms;
 	margin-right: 10px;
+	border-radius: 4px;
 }
 
 .row__posters {
@@ -28,13 +29,49 @@
 }
 
 .row__posterLarge {
-	max-height: 250px;
+	max-height: 280px;
 }
 .row__posterLarge:hover {
-	transform: scale(1.59);
+	transform: scale(1.15);
 	opacity: 1;
+	border-radius: 6px;
+	/* transform: translate(5px, -10px); */
 } 
 
+
 .row__youtube {
-	padding: "40px";
+	padding: 40px;
+}
+.myList{
+	background-color: aliceblue;
+	height: 100px;
+	color: black;
+}
+
+.backwardIcon{
+	position: absolute;
+	left: 0;
+	padding-top: 15px;
+	cursor: pointer;
+	zoom: 150%;
+	z-index: 10;
+	opacity: 0.4;
+}
+
+.forwardIcon {
+	position: absolute;
+	right: 0;
+	padding-top: 15px;
+	cursor: pointer;
+	zoom: 150%;
+	z-index: 10;
+	opacity: 0.4;
+}
+.row_large {
+	position: absolute;
+	margin-top: 45px;
+	cursor: pointer;
+	zoom: 150%;
+	z-index: 10;
+	opacity: 0.2;
 }

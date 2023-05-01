@@ -4,16 +4,17 @@ import Row from './Row/Row';
 import requests from './requests'
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
+import MyList from './MyList';
+
 
 function App() {
-
   return (
     <div className="App">
 			<Nav />
 			<Banner />
       		<Row title="NETFLIX ORIGINALS"
 				fetchUrl={requests.fetchNetflixOriginals}
-				isLargeRow={true}/>
+				isLargeRow arrow />
             <Row title="Trending Now" fetchUrl={requests.fetchTrending} /> 
 		    <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
 			<Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
@@ -24,6 +25,7 @@ function App() {
 				title="Documentaries Movies"
 				fetchUrl={requests.fetchDocumentaries}
 			/>
+			<MyList />
 			<Footer />
     </div>
   );
