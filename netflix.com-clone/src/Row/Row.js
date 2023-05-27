@@ -45,14 +45,14 @@ function Row({title, fetchUrl, isLargeRow, arrow}) {
       }
     };
 
-    const handleMove = (direction) => {
+    // const handleMove = (direction) => {
     //   setIsMoved(true);
     //   if(rowRef.current){
     //     const {scrollLeft, clientWidth} = rowRef.current
     //   const scrollTo = direction === 'left' ? scrollLeft - clientWidth : scrollLeft + clientWidth;
     //     rowRef.current.scrollTo;
     // }
-    }
+    // }
 
 	  // console.log(trailerUrl)
   return (
@@ -60,7 +60,7 @@ function Row({title, fetchUrl, isLargeRow, arrow}) {
       <h1>{title}</h1>
 
       <div className="row__posters">
-            <ArrowBackIosNewIcon onClick={() => handleMove('left')}  className={`backwardIcon ${arrow && "row_large"}`}/>
+            {/* <ArrowBackIosNewIcon onClick={() => handleMove('left')}  className={`backwardIcon ${arrow && "row_large"}`}/> */}
 
             {movies.map((movie, i) =>   (
               <img onClick={() => handleClick(movie)}
@@ -68,7 +68,7 @@ function Row({title, fetchUrl, isLargeRow, arrow}) {
             src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
             alt={movie.name} />
           ))}
-            <ArrowForwardIosIcon className={`forwardIcon ${arrow && "row_large"}`}/>
+            {/* <ArrowForwardIosIcon className={`forwardIcon ${arrow && "row_large"}`}/> */}
 
       </div>
 
