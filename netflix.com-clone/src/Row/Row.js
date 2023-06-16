@@ -45,6 +45,8 @@ function Row({title, fetchUrl, isLargeRow, arrow}) {
       }
     };
 
+
+    // for future use
     // const handleMove = (direction) => {
     //   setIsMoved(true);
     //   if(rowRef.current){

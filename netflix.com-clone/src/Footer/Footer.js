@@ -67,7 +67,7 @@ function Footer() {
 				</ul>
 			</div>
 			<h1>
-			 <a href="/">Mesafint M.</a>
+			 {/* <a href="/">Mesafint M.</a> */}
 			</h1>
 		</div>
 	);

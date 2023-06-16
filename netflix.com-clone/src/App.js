@@ -25,7 +25,8 @@ function App() {
 				title="Documentaries Movies"
 				fetchUrl={requests.fetchDocumentaries}
 			/>
-			<MyList />
+			{/* for future use */}
+			{/* <MyList /> */}
 			<Footer />
     </div>
   );
